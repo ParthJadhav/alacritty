@@ -463,7 +463,7 @@ impl Display {
 
         // Disable shadows for transparent windows on macOS.
         #[cfg(target_os = "macos")]
-        window.set_has_shadow(config.window_opacity() >= 1.0);
+        window.set_has_shadow(true);
 
         let is_wayland = matches!(raw_window_handle, RawWindowHandle::Wayland(_));
 

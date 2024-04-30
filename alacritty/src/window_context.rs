@@ -318,7 +318,7 @@ impl WindowContext {
 
         // Disable shadows for transparent windows on macOS.
         #[cfg(target_os = "macos")]
-        self.display.window.set_has_shadow(opaque);
+        self.display.window.set_has_shadow(true);
 
         #[cfg(target_os = "macos")]
         self.display.window.set_option_as_alt(self.config.window.option_as_alt());
